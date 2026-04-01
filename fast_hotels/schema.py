@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List, Literal, Optional
 
 
@@ -18,6 +18,9 @@ class Hotel:
     rating: Optional[float] = None
     url: Optional[str] = None
     amenities: List[str] = None
+    currency: Optional[str] = None
+    stars: Optional[int] = None
+    deal: Optional[str] = None
     
     def __post_init__(self):
         if self.amenities is None:
